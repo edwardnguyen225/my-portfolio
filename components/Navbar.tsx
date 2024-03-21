@@ -21,12 +21,12 @@ const Navbar = () => {
     <div className="w-full h-[65px] fixed top-0 z-50">
       <div className="w-full h-full flex flex-row items-center justify-center m-auto">
         <div className="w-[500px] h-full flex flex-row items-center justify-between">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] px-7 py-[10px] rounded-full text-gray-200 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md">
+          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] px-7 py-[10px] rounded-full text-gray-200 shadow-lg shadow-[#2A0E61]/50 backdrop-blur-md">
             {sections.map((section) => (
               <Link
                 key={`section-${section.title}`}
                 href={section.href}
-                className="cursor-pointer"
+                className="link-underline cursor-pointer"
               >
                 {section.title}
               </Link>
