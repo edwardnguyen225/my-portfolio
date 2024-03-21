@@ -63,10 +63,14 @@ const Footer = () => {
       <div className="w-full flex flex-col items-center justify-center m-auto">
         <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
           {columns.map((column) => (
-            <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
+            <div
+              key={`column-${column.title}`}
+              className="min-w-[200px] h-auto flex flex-col items-center justify-start"
+            >
               <div className="font-bold text-[16px]">{column.title}</div>
               {column.links.map((link) => (
                 <LinkItem
+                  key={`${column.title}-${link.title}`}
                   Icon={link.Icon}
                   title={link.title}
                   href={link.href}
