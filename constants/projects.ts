@@ -32,7 +32,7 @@ const kanbanTaskManager: Project = {
   image: "/projects/kanban-task-manager.png",
   tags: ["next", "zustand", "typescript", "tailwindcss"],
   sourceLink:
-    "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/kanban-task-manager-master",
+    "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/kanban-task-manager",
   demoLink: "https://kanban-task-manager.trinhan.xyz/",
   startDate: "2024-01",
 };
