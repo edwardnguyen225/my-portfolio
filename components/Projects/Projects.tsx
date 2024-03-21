@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { projects } from "@/constants";
 
 const getProjectHref = (slug: string) => {
   return "/projects/" + slug;
@@ -15,30 +16,15 @@ const Projects = () => {
         My Projects
       </h1>
       <div className="h-full w-full flex flex-col flex-wrap justify-center md:flex-row gap-10 px-10">
-        <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          href={getProjectHref("next-website")}
-          sourceLink="https://github.com"
-          demoLink="https://google.com"
-        />
-        <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          href={getProjectHref("interactive-cards")}
-          sourceLink="https://github.com"
-          demoLink="https://google.com"
-        />
-        <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Themed Website"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          href={getProjectHref("space-website")}
-          sourceLink="https://github.com"
-          demoLink="https://google.com"
-        />
+        {Object.values(projects)
+          .sort((a, b) => a.startDate.localeCompare(b.startDate))
+          .map((project) => (
+            <ProjectCard
+              key={project.title}
+              project={project}
+              href={getProjectHref(project.slug)}
+            />
+          ))}
       </div>
     </div>
   );

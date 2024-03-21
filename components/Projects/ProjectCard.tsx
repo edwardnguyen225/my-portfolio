@@ -1,17 +1,14 @@
 "use client";
 
+import { Project } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import { RxEyeOpen, RxGithubLogo } from "react-icons/rx";
 
 interface Props {
-  src: string;
-  title: string;
-  description: string;
+  project: Project;
   href: string;
-  sourceLink?: string;
-  demoLink?: string;
 }
 
 const ProjectLink = ({
@@ -32,27 +29,20 @@ const ProjectLink = ({
   );
 };
 
-const ProjectCard = ({
-  src,
-  title,
-  description,
-  href,
-  sourceLink,
-  demoLink,
-}: Props) => {
+const ProjectCard = ({ project, href }: Props) => {
   return (
-    <div className="min-w-[300px] max-w-[420px] grow-0 shrink-0 relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] hover:shadow-[#2A0E61]">
+    <div className="min-w-[300px] max-w-[420px] grow-0 shrink-0 relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] hover:shadow-[#2A0E61] flex flex-col">
       <Image
-        src={src}
-        alt={title}
-        width={1000}
-        height={1000}
-        className="w-full object-contain"
+        src={project.image}
+        alt={project.title}
+        width={420}
+        height={254}
+        className="w-full object-cover h-[254px]"
       />
 
-      <div className="relative p-4 flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold text-white">{title}</h1>
-        <p className="text-gray-300">{description}</p>
+      <div className="relative p-4 flex flex-col flex-1 gap-2">
+        <h1 className="text-2xl font-semibold text-white">{project.title}</h1>
+        <p className="text-gray-300 line-clamp-3">{project.description}</p>
         <div>
           <Link
             href={href}
@@ -64,16 +54,16 @@ const ProjectCard = ({
       </div>
 
       <div className="p-4 pt-0 flex items-center justify-start gap-4">
-        {sourceLink && (
-          <ProjectLink href={sourceLink}>
-            <RxGithubLogo />
-            Source Code
+        {project.demoLink && (
+          <ProjectLink href={project.demoLink}>
+            <RxEyeOpen />
+            Preview Site
           </ProjectLink>
         )}
-        {demoLink && (
-          <ProjectLink href={demoLink}>
-            <RxEyeOpen />
-            Demo
+        {project.sourceLink && (
+          <ProjectLink href={project.sourceLink}>
+            <RxGithubLogo />
+            Source Code
           </ProjectLink>
         )}
       </div>

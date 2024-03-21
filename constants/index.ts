@@ -122,3 +122,5 @@ export const Full_stack = [
     height: 40,
   },
 ];
+
+export * from "./projects";
