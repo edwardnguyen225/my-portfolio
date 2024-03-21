@@ -5,15 +5,15 @@ const Navbar = () => {
   const sections = [
     {
       title: "About",
-      href: "#about-me",
+      href: "/#about-me",
     },
     {
       title: "Skills",
-      href: "#skills",
+      href: "/#skills",
     },
     {
       title: "Projects",
-      href: "#projects",
+      href: "/projects",
     },
   ];
 
