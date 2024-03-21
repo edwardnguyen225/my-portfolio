@@ -1,9 +1,5 @@
-import Projects from "@/components/Projects";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="size-full py-24">
-      <Projects />
-    </main>
-  );
+  return redirect("/#projects");
 }

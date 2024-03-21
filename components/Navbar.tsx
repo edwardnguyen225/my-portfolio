@@ -13,7 +13,7 @@ const Navbar = () => {
     },
     {
       title: "Projects",
-      href: "/projects",
+      href: "/#projects",
     },
   ];
 
