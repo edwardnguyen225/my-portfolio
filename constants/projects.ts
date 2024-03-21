@@ -55,3 +55,10 @@ export const projects = {
   kanbanTaskManager,
   planetsFactSite,
 };
+
+export const sortedProjectsList = [
+  mattermost,
+  kanbanTaskManager,
+  rockPaperScissors,
+  planetsFactSite,
+];
