@@ -124,3 +124,4 @@ export const Full_stack = [
 ];
 
 export * from "./projects";
+export * from "./works";
