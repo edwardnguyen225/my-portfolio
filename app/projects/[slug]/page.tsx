@@ -1,4 +1,8 @@
+import UnderDevelopment from "@/components/UnderDevelopment";
+
 export default function Home() {
+  if (!process.env.SHOW_PROJECT_DETAIL) return <UnderDevelopment />;
+
   return (
     <main className="size-full">
       <div className="flex flex-col items-center justify-center py-20">
