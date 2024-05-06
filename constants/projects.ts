@@ -53,16 +53,30 @@ const planetsFactSite: Project = {
   technologies: ["next", "typescript", "tailwindcss"],
 };
 
+const blogrLandingPage: Project = {
+  title: "Blogr Landing Page",
+  slug: "blogr-landing-page",
+  description: "A landing page for a blogging platform. First time using Vue 3",
+  image: "/projects/blogr-landing-page.png",
+  tags: ["next", "typescript", "tailwindcss"],
+  sourceLink: "https://github.com/edwardnguyen225/frontendmentor-blogr",
+  demoLink: "https://blogr.trinhan.xyz/",
+  startDate: "2024-04",
+  technologies: ["vue", "CSS"],
+};
+
 export const projects = {
   mattermost,
   rockPaperScissors,
   kanbanTaskManager,
   planetsFactSite,
+  blogrLandingPage,
 };
 
 export const sortedProjectsList = [
   mattermost,
   kanbanTaskManager,
   rockPaperScissors,
+  blogrLandingPage,
   planetsFactSite,
 ];
