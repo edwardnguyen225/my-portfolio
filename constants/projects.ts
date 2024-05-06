@@ -9,6 +9,7 @@ const mattermost: Project = {
   sourceLink: "https://github.com/mattermost/mattermost",
   demoLink: "https://community.mattermost.com/",
   startDate: "2023-10",
+  technologies: ["react", "redux", "typescript"],
 };
 
 const rockPaperScissors: Project = {
@@ -22,6 +23,7 @@ const rockPaperScissors: Project = {
     "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/rock-paper-scissors-master",
   demoLink: "https://rock-paper-scissors.trinhan.xyz",
   startDate: "2023-10",
+  technologies: ["svelte", "typescript", "tailwindcss"],
 };
 
 const kanbanTaskManager: Project = {
@@ -35,6 +37,7 @@ const kanbanTaskManager: Project = {
     "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/kanban-task-manager",
   demoLink: "https://kanban-task-manager.trinhan.xyz/",
   startDate: "2024-01",
+  technologies: ["next", "zustand", "typescript", "tailwindcss"],
 };
 
 const planetsFactSite: Project = {
@@ -47,6 +50,7 @@ const planetsFactSite: Project = {
     "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/planets-fact-site/",
   demoLink: "https://planets-fact-site.trinhan.xyz",
   startDate: "2023-12",
+  technologies: ["next", "typescript", "tailwindcss"],
 };
 
 export const projects = {

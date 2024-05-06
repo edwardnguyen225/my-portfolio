@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import { RxEyeOpen, RxGithubLogo } from "react-icons/rx";
+import TechBadge from "./TechBadge";
 
 interface Props {
   project: Project;
@@ -42,6 +43,11 @@ const ProjectCard = ({ project, href }: Props) => {
 
       <div className="relative p-4 flex flex-col flex-1 gap-2">
         <h1 className="text-2xl font-semibold text-white">{project.title}</h1>
+        <div className="flex gap-2">
+          {project.technologies.map((tech) => (
+            <TechBadge key={tech} tech={tech} />
+          ))}
+        </div>
         <p className="text-gray-300 line-clamp-3">{project.description}</p>
         <div>
           <Link
