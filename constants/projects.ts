@@ -65,6 +65,18 @@ const blogrLandingPage: Project = {
   technologies: ["vue", "CSS"],
 };
 
+const vietnamQuiz: Project = {
+  title: "Vietnam Quiz",
+  slug: "vietnam-quiz",
+  description: "A quiz about Vietnam. First time using OutSystems",
+  image: "/projects/vietnam-quiz.png",
+  tags: ["next", "typescript", "tailwindcss"],
+  demoLink:
+    "https://personal-fasvfiiv.outsystemscloud.com/VietnamQuizGame/VietnamQuiz",
+  startDate: "2024-05",
+  technologies: ["OutSystems"],
+};
+
 export const projects = {
   mattermost,
   rockPaperScissors,
@@ -74,6 +86,7 @@ export const projects = {
 };
 
 export const sortedProjectsList = [
+  vietnamQuiz,
   mattermost,
   kanbanTaskManager,
   rockPaperScissors,
