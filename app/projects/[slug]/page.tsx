@@ -1,7 +1,8 @@
 import UnderDevelopment from "@/components/UnderDevelopment";
 
-export default function Home() {
-  if (!process.env.SHOW_PROJECT_DETAIL) return <UnderDevelopment />;
+export default function ProjectDetail() {
+  const shouldShowProjectDetail = process.env.SHOW_PROJECT_DETAIL === "true";
+  if (!shouldShowProjectDetail) return <UnderDevelopment />;
 
   return (
     <main className="size-full">
