@@ -1,5 +1,95 @@
 import { Project } from "@/types";
 
+const technologies = {
+  react: {
+    name: "React",
+    icon: "/icons/react.svg",
+  },
+  next: {
+    name: "Next.js",
+    icon: "/icons/nextjs.svg",
+  },
+  vue: {
+    name: "Vue",
+    icon: "/icons/vue.svg",
+  },
+  svelte: {
+    name: "Svelte",
+    icon: "/icons/svelte.svg",
+  },
+  tailwindcss: {
+    name: "Tailwind CSS",
+    icon: "/icons/tailwindcss.svg",
+  },
+  typescript: {
+    name: "TypeScript",
+    icon: "/icons/typescript.svg",
+  },
+  redux: {
+    name: "Redux",
+    icon: "/icons/redux.svg",
+  },
+  zustand: {
+    name: "Zustand",
+    icon: "/icons/zustand.svg",
+  },
+  prisma: {
+    name: "Prisma",
+    icon: "/icons/prisma.svg",
+  },
+  marked: {
+    name: "Marked",
+    icon: "/icons/marked.svg",
+  },
+  OutSystems: {
+    name: "OutSystems",
+    icon: "/icons/outsystems.svg",
+  },
+  nest: {
+    name: "NestJS",
+    icon: "/icons/nestjs.svg",
+  },
+};
+type Tech = keyof typeof technologies;
+
+const getTechnologies = (techs: Tech[]) => {
+  const techList: string[] = [];
+  techs.forEach((tech) => {
+    techList.push(technologies[tech].name);
+  });
+  return techList;
+};
+
+const kanbanTaskManagerV2: Project = {
+  title: "Kanban Task Manager V2",
+  slug: "kanban-task-manager-v2",
+  description:
+    "My first full-stack project. A fully-functional task management app with NestJS backend and NextJS frontend",
+  image: "/projects/kanban-task-manager-v2.png",
+  tags: ["next", "zustand", "typescript", "tailwindcss"],
+  sourceLink: "https://github.com/edwardnguyen225/kanban-task-manager",
+  demoLink: "https://kanban.trinhan.dev/",
+  startDate: "2024-05",
+  technologies: getTechnologies(["next", "tailwindcss", "nest", "prisma"]),
+};
+
+const markdownEditor: Project = {
+  title: "Markdown Editor",
+  slug: "markdown-editor",
+  description: "A simple markdown editor",
+  image: "/projects/markdown-editor.png",
+  tags: ["react", "typescript", "tailwindcss"],
+  sourceLink: "https://github.com/edwardnguyen225/markdown-editor-reactjs",
+  demoLink: "https://markdown-editor-reactjs.trinhan.xyz/",
+  startDate: "2024-05",
+  technologies: getTechnologies([
+    "react",
+    "typescript",
+    "tailwindcss",
+    "marked",
+  ]),
+};
+
 const mattermost: Project = {
   title: "Mattemost",
   slug: "mattermost",
@@ -9,7 +99,7 @@ const mattermost: Project = {
   sourceLink: "https://github.com/mattermost/mattermost",
   demoLink: "https://community.mattermost.com/",
   startDate: "2023-10",
-  technologies: ["react", "redux", "typescript"],
+  technologies: getTechnologies(["react", "redux", "typescript"]),
 };
 
 const rockPaperScissors: Project = {
@@ -23,7 +113,7 @@ const rockPaperScissors: Project = {
     "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/rock-paper-scissors-master",
   demoLink: "https://rock-paper-scissors.trinhan.xyz",
   startDate: "2023-10",
-  technologies: ["svelte", "typescript", "tailwindcss"],
+  technologies: getTechnologies(["svelte", "typescript", "tailwindcss"]),
 };
 
 const kanbanTaskManager: Project = {
@@ -37,7 +127,12 @@ const kanbanTaskManager: Project = {
     "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/kanban-task-manager",
   demoLink: "https://kanban-task-manager.trinhan.xyz/",
   startDate: "2024-01",
-  technologies: ["next", "zustand", "typescript", "tailwindcss"],
+  technologies: getTechnologies([
+    "next",
+    "zustand",
+    "typescript",
+    "tailwindcss",
+  ]),
 };
 
 const planetsFactSite: Project = {
@@ -50,7 +145,7 @@ const planetsFactSite: Project = {
     "https://github.com/edwardnguyen225/frontend-mentor-challenges/tree/main/planets-fact-site/",
   demoLink: "https://planets-fact-site.trinhan.xyz",
   startDate: "2023-12",
-  technologies: ["next", "typescript", "tailwindcss"],
+  technologies: getTechnologies(["next", "typescript", "tailwindcss"]),
 };
 
 const blogrLandingPage: Project = {
@@ -62,7 +157,7 @@ const blogrLandingPage: Project = {
   sourceLink: "https://github.com/edwardnguyen225/frontendmentor-blogr",
   demoLink: "https://blogr.trinhan.xyz/",
   startDate: "2024-04",
-  technologies: ["vue", "CSS"],
+  technologies: getTechnologies(["vue", "typescript", "tailwindcss"]),
 };
 
 const vietnamQuiz: Project = {
@@ -74,7 +169,7 @@ const vietnamQuiz: Project = {
   demoLink:
     "https://personal-fasvfiiv.outsystemscloud.com/VietnamQuizGame/VietnamQuiz",
   startDate: "2024-05",
-  technologies: ["OutSystems"],
+  technologies: getTechnologies(["OutSystems"]),
 };
 
 export const projects = {
@@ -83,9 +178,13 @@ export const projects = {
   kanbanTaskManager,
   planetsFactSite,
   blogrLandingPage,
+  markdownEditor,
+  kanbanTaskManagerV2,
 };
 
 export const sortedProjectsList = [
+  kanbanTaskManagerV2,
+  markdownEditor,
   vietnamQuiz,
   mattermost,
   kanbanTaskManager,
